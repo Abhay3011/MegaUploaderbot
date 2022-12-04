@@ -105,7 +105,7 @@ async def uploaderHandler(bot:Update, msg:Message):
                             f"During Downloading file from this url: {url}.\n{e}"
                         )
                     else:
-                        if downObj.get_final_filesize() < 21474836480:
+                        if downObj.get_final_filesize() >= 2147483648:
                             await pmsg.edit_text(
                                 "<b>URL also verifed, Now downloading the file...</b>",
                                 parse_mode = 'html'
@@ -148,7 +148,7 @@ async def uploaderHandler(bot:Update, msg:Message):
                         else:
                             downObj.stop()
                             return await pmsg.edit_text(
-                                f"I can't Upload file that are larger than 2000MB.{common_text}"
+                                f"I can't Upload file that are larger than 20000MB.{common_text}"
                             )
                 try:
                     await mlog.upload(
