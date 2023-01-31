@@ -1,4 +1,7 @@
-FROM debian:latest
+FROM python:3.11.1-buster
+
+WORKDIR . .
+COPY . .
 
 RUN apt update && apt upgrade -y
 RUN apt install git python3-pip -y
