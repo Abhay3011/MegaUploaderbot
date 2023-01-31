@@ -105,7 +105,7 @@ async def uploaderHandler(bot:Update, msg:Message):
                             f"During Downloading file from this url: {url}.\n{e}"
                         )
                     else:
-                        if downObj.get_final_filesize() >= 2147483648:
+                        if downObj.get_final_filesize() >= 648:
                             await pmsg.edit_text(
                                 "<b>URL also verifed, Now downloading the file...</b>",
                                 parse_mode = 'html'
