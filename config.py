@@ -5,15 +5,15 @@
 from os import environ
 
 class Config(object):
-    TG_BOT_TOKEN = environ.get("BOT_TOKEN", "5842881515:AAHO05x6ZJZgUcBKw9wZBCXDTcBHvJ4EMLw") # Make a bot from https://t.me/BotFather and enter the token here
+    TG_BOT_TOKEN = environ.get("BOT_TOKEN", "") # Make a bot from https://t.me/BotFather and enter the token here
     
-    APP_ID = int(environ.get("API_ID", "9544521")) # Get this value from https://my.telegram.org/apps
+    APP_ID = int(environ.get("API_ID", "")) # Get this value from https://my.telegram.org/apps
     
-    API_HASH = environ.get("API_HASH", "5cf32e97dc94510e46524f2286c95116") # Get this value from https://my.telegram.org/apps
+    API_HASH = environ.get("API_HASH", "") # Get this value from https://my.telegram.org/apps
     
-    OWNER_ID = int(environ.get("OWNER_ID", "1358657527")) # Your(owner's) telegram id
+    OWNER_ID = int(environ.get("OWNER_ID", "")) # Your(owner's) telegram id
     
-    MONGO_STR = environ.get("MONGO_STR", "mongodb+srv://test:test@cluster0.rc1urp8.mongodb.net/?retryWrites=true&w=majority") # Get from MongoDB Atlas
+    MONGO_STR = environ.get("MONGO_STR", "") # Get from MongoDB Atlas
 
     DOWNLOAD_LOCATION = "app//DOWNLOADS//" # The download location for users. (Don't change anything in this field!)
 
